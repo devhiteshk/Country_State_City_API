@@ -1,10 +1,10 @@
-import CountryCityState from "./../models/CountryCityState.js";
+import CountryCityState from "../models/countryCityState.js";
 import data from "./CreateCSCdb.js";
 
 // Desc: create database
 // Method: POST
 // Access: Private
-// Path: /api/v1/create-db
+// Path: /create-csc-db/
 
 const createCscDb = async (req, res) => {
   try {

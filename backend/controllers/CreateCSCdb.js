@@ -7,7 +7,7 @@ const cities = City.getAllCities();
 // create a api call to create a db of countries, states, cities
 
 const countryStateCity = (city) => {
-  const state = states.find((state) => state.countryCode === city.countryCode);
+  const state = states.find((state) => state.isoCode === city.stateCode);
   const country = countries.find(
     (country) => country.isoCode === state.countryCode
   );

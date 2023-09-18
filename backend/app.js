@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import searchRoute from "./routes/search.js";
 import createDBrouter from "./routes/createdb.js";
 
 const app = express();
@@ -13,5 +14,7 @@ app.get("/healthcheck", (req, res) => {
 
 // DB created on MONDAY 18th September 2023
 // app.use("/crate-csc-db", createDBrouter);
+
+app.use("/api/v1", searchRoute);
 
 export default app;
