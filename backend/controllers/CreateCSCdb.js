@@ -1,4 +1,5 @@
 import { Country, State, City } from "country-state-city";
+import fs from "fs";
 
 const countries = Country.getAllCountries();
 const states = State.getAllStates();
@@ -30,5 +31,10 @@ let data = [];
 cities.forEach((city) => {
   data.push(countryStateCity(city));
 });
+
+// fs.writeFile("./CreateCSCdb.json", JSON.stringify(data), (err) => {
+//   if (err) throw err;
+//   console.log("The file has been saved!");
+// });
 
 export default data;
