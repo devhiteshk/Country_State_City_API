@@ -13,7 +13,7 @@ app.get("/healthcheck", (req, res) => {
 });
 
 // DB created on MONDAY 18th September 2023
-// app.use("/crate-csc-db", createDBrouter);
+// app.use("/create-csc-db", createDBrouter);
 
 app.use("/api/v1", searchRoute);
 
