@@ -3,10 +3,7 @@
 // Access: Public
 // Path: /api/v1/search-db
 
-import mongoose from "mongoose";
-
-import CountryCityStateSchema from "../models/CountryCityState.js";
-mongoose.model("CountryCityState", CountryCityStateSchema);
+import CountryCityState from "../models/CCSschema.js";
 
 const searchInDB = async (req, res) => {
   const { search } = req.query;

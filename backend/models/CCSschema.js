@@ -42,4 +42,4 @@ const CountryCityStateSchema = new Schema(
 
 // CountryCityStateSchema.index({ csc: 1 });
 
-export default CountryCityStateSchema;
+export default mongoose.model("CountryCityState", CountryCityStateSchema);

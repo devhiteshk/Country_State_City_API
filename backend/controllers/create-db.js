@@ -1,4 +1,4 @@
-import { CountryCityState } from "./../models/countryCityState.js";
+import CountryCityState from "../models/CCSschema.js";
 import { data } from "./CreateCSCdb.js";
 
 // Desc: create database
