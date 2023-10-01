@@ -24,6 +24,15 @@ app.get("/healthcheck", (req, res) => {
   res.status(200).json({ status: "OK", message: "Server is running" });
 });
 
+app.use("/", (req, res) => {
+  res.status(200).json({
+    status: "OK",
+    message: "Welcome to the Country City State API.",
+    howToUse:
+      "Please use /api/v1/search-db?search='yourSearchQuery'?limit='yourlimit'?offSet='youroffset' to search the database",
+  });
+});
+
 // DB created on MONDAY 18th September 2023
 // app.use("/create-csc-db", createDBrouter);
 
