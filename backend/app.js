@@ -18,10 +18,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: [
-      // "http://localhost:5173",
-      "https://country-state-city-api-v1.vercel.app/",
-    ],
+    origin: ["https://country-state-city-api-v1.vercel.app/"],
   })
 );
 
