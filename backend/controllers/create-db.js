@@ -1,5 +1,5 @@
-import CountryCityState from "../models/countryCityState.js";
-import data from "./CreateCSCdb.js";
+import { CountryCityState } from "../models/countryCityState.js";
+import { data } from "./CreateCSCdb.js";
 
 // Desc: create database
 // Method: POST

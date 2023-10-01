@@ -5,7 +5,7 @@ import CountryCityState from "../models/countryCityState.js";
 // Path: /api/v1/search-db
 const searchInDB = async (req, res) => {
   const { search } = req.query;
-  const limit = req.query.limit ? req.query.limit : 20;
+  const limit = req.query.limit ? req.query.limit : 15;
   const offSet = req.query.offSet ? req.query.offSet : 0;
   console.log(search);
   try {
