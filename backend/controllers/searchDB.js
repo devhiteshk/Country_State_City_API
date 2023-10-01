@@ -2,6 +2,9 @@
 // Method: GET
 // Access: Public
 // Path: /api/v1/search-db
+
+import CountryCityState from "./../models/countryCityState.js";
+
 const searchInDB = async (req, res) => {
   const { search } = req.query;
   const limit = req.query.limit ? req.query.limit : 15;
