@@ -24,7 +24,7 @@ function Example() {
     debounce((value, limit, offset) => {
       if (value.length > 2) {
         searchDB(value, parseInt(limit), parseInt(offset)).then((res) => {
-          setResults(res);
+          setResults(res.results);
         });
       } else {
         setResults([]);
@@ -70,7 +70,7 @@ function Example() {
             with debouncing
           </Typography>
           <Typography variant="caption" color="grey">
-            (min 4 characters)
+            (min 3 characters)
           </Typography>
         </Box>
 

@@ -13,7 +13,7 @@ const searchInDB = async (req, res) => {
   try {
     // if search lenght is less than 3 characters return
 
-    if (search.length < 4) {
+    if (search.length < 2) {
       return res.status(400).json({
         success: false,
         message: "Search length must be greater than 3 characters",
