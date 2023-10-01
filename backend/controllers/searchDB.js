@@ -9,7 +9,7 @@ const searchInDB = async (req, res) => {
   const { search } = req.query;
   const limit = req.query.limit ? req.query.limit : 15;
   const offSet = req.query.offSet ? req.query.offSet : 0;
-  console.log(search);
+  // console.log(search);
   try {
     // if search lenght is less than 3 characters return
 
