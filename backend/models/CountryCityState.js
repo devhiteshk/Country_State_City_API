@@ -40,7 +40,6 @@ const CountryCityStateSchema = new Schema(
   { timestamps: { required: true } }
 );
 
-CountryCityStateSchema.index({ csc: 1 });
+// CountryCityStateSchema.index({ csc: 1 });
 
-// add timestamps
-export default mongoose.model("CountryCityState", CountryCityStateSchema);
+export default CountryCityStateSchema;
