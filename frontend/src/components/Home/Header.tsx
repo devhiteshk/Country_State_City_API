@@ -1,6 +1,7 @@
 import { Box, Tooltip, Typography } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 import { GitHub } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -41,7 +42,13 @@ function Header() {
         </Box>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <Tooltip title={"View on github"}>
-            <GitHub sx={{ fontSize: 30, cursor: "pointer" }} />
+            <Link
+              style={{ textDecoration: "none", color: "#000" }}
+              to={"https://github.com/devhiteshk/CCS_API"}
+              target="_blank"
+            >
+              <GitHub sx={{ fontSize: 30, cursor: "pointer" }} />
+            </Link>
           </Tooltip>
         </Box>
       </Box>

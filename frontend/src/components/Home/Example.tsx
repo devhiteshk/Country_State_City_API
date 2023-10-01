@@ -7,11 +7,19 @@ import { searchDB } from "../../API/searchDB";
 import debounce from "lodash.debounce";
 
 // searchDB(e.target.value, parseInt(limit), parseInt(offset)),
+
+// example of interface
+
+interface resInterface {
+  err: string;
+}
+
 function Example() {
   const [value, setValue] = React.useState("");
   const [limit, setLimit] = React.useState("20");
   const [offset, setOffset] = React.useState("0");
-  const [results, setResults] = React.useState([]);
+
+  const [results, setResults] = React.useState<resInterface[]>([]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -23,11 +31,16 @@ function Example() {
   const debouncedSearchDB = React.useCallback(
     debounce((value, limit, offset) => {
       if (value.length > 2) {
-        searchDB(value, parseInt(limit), parseInt(offset)).then((res) => {
-          setResults(res.results);
-        });
+        searchDB(value, parseInt(limit), parseInt(offset))
+          .then((res) => {
+            console.log(res);
+            setResults(res.results);
+          })
+          .catch(() =>
+            setResults([{ err: "429 Too Many Requests !!! Limit Exceeded" }])
+          );
       } else {
-        setResults([]);
+        setResults([{ err: "min 3 characters" }]);
       }
     }, 500),
     [searchDB]

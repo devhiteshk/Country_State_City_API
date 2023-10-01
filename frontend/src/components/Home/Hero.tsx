@@ -64,6 +64,7 @@ function Hero() {
             endIcon={<RocketLaunchIcon />}
             variant="contained"
             sx={{
+              pointerEvents: "none",
               ":hover": {
                 background:
                   "linear-gradient( 135deg, #FD6585 10%, #0D25B9 100%)",

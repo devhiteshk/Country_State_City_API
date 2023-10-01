@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
 import Home from "./pages/Home";
-import Error from "./pages/Error";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -27,9 +25,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<Error />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
