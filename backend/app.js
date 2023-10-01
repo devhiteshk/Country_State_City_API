@@ -15,7 +15,15 @@ const limiter = rateLimit({
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: [
+      // "http://localhost:5173",
+      "https://country-state-city-api-v1.vercel.app/",
+    ],
+  })
+);
 
 // Apply the rate limiting middleware to all requests
 app.use(limiter);
@@ -23,6 +31,11 @@ app.use(limiter);
 app.get("/healthcheck", (req, res) => {
   res.status(200).json({ status: "OK", message: "Server is running" });
 });
+
+// DB created on MONDAY 18th September 2023
+// app.use("/create-csc-db", createDBrouter);
+
+app.use("/api/v1", searchRoute);
 
 app.use("/", (req, res) => {
   res.status(200).json({
@@ -32,10 +45,5 @@ app.use("/", (req, res) => {
       "Please use /api/v1/search-db?search='yourSearchQuery'?limit='yourlimit'?offSet='youroffset' to search the database",
   });
 });
-
-// DB created on MONDAY 18th September 2023
-// app.use("/create-csc-db", createDBrouter);
-
-app.use("/api/v1", searchRoute);
 
 export default app;

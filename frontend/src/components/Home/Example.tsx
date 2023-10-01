@@ -33,7 +33,6 @@ function Example() {
       if (value.length > 2) {
         searchDB(value, parseInt(limit), parseInt(offset))
           .then((res) => {
-            console.log(res);
             setResults(res.results);
           })
           .catch(() =>

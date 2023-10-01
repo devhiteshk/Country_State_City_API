@@ -4,10 +4,40 @@ import Hero from "../components/Home/Hero";
 import Features from "../components/Home/Features";
 import Footer from "../components/Home/Footer";
 import Example from "../components/Home/Example";
-
+import { Dna } from "react-loader-spinner";
+import { useEffect, useState } from "react";
 function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   return (
     <>
+      <Box
+        sx={{
+          position: "sticky",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100vw",
+          height: "100vh",
+          display: loading ? "flex" : "none",
+          top: 0,
+          backgroundColor: "#fff",
+          zIndex: 2,
+        }}
+      >
+        <Dna
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+        />
+      </Box>
       <Box
         sx={{
           width: "100vw",
@@ -66,6 +96,23 @@ function Home() {
         <Box sx={{ pl: { xs: 1, md: 10 }, pr: { xs: 1, md: 10 } }}>
           <Footer />
         </Box>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 1,
+        }}
+      >
+        <a href="https://www.freepik.com/free-vector/vector-world-globe-map-india-middle-east-asia-centered-map-blue-planet-sphere-icon-isolated-white-background_16311609.htm#query=globe&position=14&from_view=keyword&track=sph">
+          <Typography variant="caption" color="blue">
+            Image by callmetak
+          </Typography>
+        </a>
+        <Typography variant="caption" color="initial">
+          on Freepik
+        </Typography>
       </Box>
     </>
   );
