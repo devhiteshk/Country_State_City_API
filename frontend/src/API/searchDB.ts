@@ -1,4 +1,4 @@
-const BASE_URI = "http://ccsapi.up.railway.app";
+const BASE_URI = "https://ccsapi.up.railway.app";
 // const BASE_URI = "http://localhost:911";
 
 export const searchDB = async (
