@@ -1,5 +1,5 @@
 import express from "express";
-import searchInDB from "../controllers/searchDB.js";
+import searchInDB from "./../controllers/searchDB.js";
 
 const router = express.Router();
 

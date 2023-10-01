@@ -1,4 +1,4 @@
-import CountryCityState from "../models/countryCityState.js";
+import CountryCityState from "./../models/countryCityState.js";
 // Desc: search in database
 // Method: GET
 // Access: Public
