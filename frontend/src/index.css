@@ -13,3 +13,14 @@ font-family: 'Roboto', sans-serif; */
 .token{
     text-wrap: wrap;
 }
+
+@keyframes rotae {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(90deg);}
+    50%  {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+  }
+
+.rotateGlobe{
+    animation: rotae 18s linear infinite;
+}

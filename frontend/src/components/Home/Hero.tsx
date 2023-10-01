@@ -19,12 +19,14 @@ function Hero() {
         }}
       >
         <Box
+          className="rotateGlobe"
           sx={{
             width: { xs: "210px", sm: "240px", lg: "340px" },
             display: "flex",
             justifyContent: "center",
             margin: "auto",
             mt: 0,
+            zIndex: 0,
           }}
         >
           <img
@@ -47,7 +49,7 @@ function Hero() {
             fontFamily={"Hind Siliguri, sans-serif"}
             fontWeight={"bold"}
             color="primary.light"
-            sx={{ fontSize: { xs: 25, md: 36 } }}
+            sx={{ fontSize: { xs: 25, md: 36 }, zIndex: 0 }}
           >
             Country State City API
           </Typography>

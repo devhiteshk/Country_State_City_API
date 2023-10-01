@@ -11,7 +11,7 @@ function Header() {
         justifyContent: "center",
         alignItems: "center",
         boxShadow: 3,
-        zIndex: 1,
+        zIndex: 3,
         backgroundColor: "#fff",
       }}
     >
