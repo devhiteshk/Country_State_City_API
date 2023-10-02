@@ -19,7 +19,7 @@ app.use(
   cors({
     credentials: true,
     origin: [
-      "https://country-state-city-api-v1.vercel.app/",
+      "https://country-state-city-api-v1.vercel.app",
       "http://localhost:5173",
     ],
   })
