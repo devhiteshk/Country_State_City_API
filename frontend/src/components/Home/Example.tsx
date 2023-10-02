@@ -78,7 +78,7 @@ function Example() {
           }}
         >
           <Typography variant="body2" color="grey">
-            Just type any country, state or city and get the results in reltime
+            Just type any country, state or city and get the results in realtime
             with debouncing
           </Typography>
           <Typography variant="caption" color="grey">
