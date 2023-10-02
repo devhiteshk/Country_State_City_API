@@ -19,21 +19,22 @@ app.use(
   cors({
     credentials: true,
     origin: "https://country-state-city-api-v1.vercel.app/",
+    origin: "http://localhost:5173",
   })
 );
 
 // Apply the rate limiting middleware to all requests
 app.use(limiter);
 
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
 
 app.get("/healthcheck", (req, res) => {
   res.status(200).json({ status: "OK", message: "Server is running" });
