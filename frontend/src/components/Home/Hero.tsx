@@ -1,10 +1,11 @@
 import { Box, Typography, Button } from "@mui/material";
 import globeblue from "./../../assets/images/globeblue.jpg";
-
+import { useNavigate } from "react-router-dom";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import GitHubButton from "react-github-btn";
 
 function Hero() {
+  const navigate = useNavigate();
   return (
     <Box height={"100%"}>
       <Box
@@ -65,8 +66,8 @@ function Hero() {
           <Button
             endIcon={<RocketLaunchIcon />}
             variant="contained"
+            onClick={() => navigate("/documentation")}
             sx={{
-              pointerEvents: "none",
               ":hover": {
                 background:
                   "linear-gradient( 135deg, #FD6585 10%, #0D25B9 100%)",

@@ -1,5 +1,4 @@
-const BASE_URI = "https://ccsapi.up.railway.app";
-// const BASE_URI = "http://localhost:911";
+const BASE_URI = import.meta.env.VITE_APP_API_URL || "http://localhost:3000/api/csc";
 
 export const searchDB = async (
   searchTerm: string,
@@ -7,7 +6,7 @@ export const searchDB = async (
   offset: number
 ) => {
   const response = await fetch(
-    `${BASE_URI}/api/v1/search-db?search=${searchTerm}&limit=${limit}&offSet=${offset}`
+    `${BASE_URI}/search?search=${searchTerm}&limit=${limit}&offSet=${offset}`
   );
   const data = await response.json();
   return data;
