@@ -1,0 +1,24 @@
+# CODEOWNERS
+# Each line is a file pattern followed by one or more owners.
+# Owners are automatically requested for review when someone opens a
+# pull request that modifies the matched files.
+# More info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owner — fallback for everything not matched below
+*                   @devhiteshk
+
+# Community health files
+/README.md          @devhiteshk
+/CONTRIBUTING.md    @devhiteshk
+/CODE_OF_CONDUCT.md @devhiteshk
+/SECURITY.md        @devhiteshk
+/LICENSE            @devhiteshk
+
+# GitHub config
+/.github/           @devhiteshk
+
+# Source code
+/src/               @devhiteshk
+
+# CI/CD
+/.github/workflows/ @devhiteshk
